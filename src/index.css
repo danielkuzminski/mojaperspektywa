@@ -1,0 +1,48 @@
+/* font-family: 'Cardo', serif; */
+/* font-family: 'Caveat', cursive; */
+/* font-family: 'Dancing Script', cursive;  */
+
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Caveat&family=Dancing+Script&display=swap');
+
+:root{
+  --primary: #b88b88;
+  --secondary: #4e4e4e;
+  --error: #ff4a4a;
+}
+
+/* base styles & title */
+body{
+  /* font-family: 'Cardo', serif; */
+  font-family: 'Dancing Script', cursive; 
+  color: var(--secondary);
+}
+.App{
+  max-width: 960px;
+  margin: 0 auto;
+}
+.title h1{
+  font-family: 'Caveat', cursive;
+  color: var(--primary);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+.title h2, .title p{
+  text-align: center;
+  font-size: 1.5rem;
+}
+.title h2{
+  margin-top: 60px;
+  font-size: 3.5rem;
+}
+
+/* upload form styles */
+
+
+/* progress bar styles */
+
+
+/* image grid styles */
+
+
+/* modal styles */
