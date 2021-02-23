@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ProgressBar from './ProgressBar';
 
-
 const UploadForm = () => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
@@ -14,27 +13,29 @@ const UploadForm = () => {
 
     // checking selected file and it's type. will show either file or error msg
     if (selected && allowedTypes.includes(selected.type)) {
-      setFile(selected)
+      setFile(selected);
       setError('');
     } else {
       // we reset value in case selected file is wrong type
-      setFile(null)
+      setFile(null);
       setError('Wybrano niewłaściwy format pliku. Dozwolone są tylko obrazy');
     }
-  }
+  };
 
   return (
-    <form action="">
-      <input type="file" onChange={changeHandler}/>
-      <span>+</span>
+    <form>
+      <label>
+        <input type='file' onChange={changeHandler} />
+        <span>+</span>
+      </label>
       {/* div below will give an output to selected file */}
-      <div className="output">
-        { error && <p className="error">{ error }</p> } 
-        { file && <p>{ file.name }</p> }
-        { file && <ProgressBar file={file} setFile={setFile} />}
+      <div className='output'>
+        {error && <p className='error'>{error}</p>}
+        {file && <p>{file.name}</p>}
+        {file && <ProgressBar file={file} setFile={setFile} />}
       </div>
     </form>
-  )
-}
+  );
+};
 
 export default UploadForm;
